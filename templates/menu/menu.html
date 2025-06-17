@@ -1,0 +1,10 @@
+{% if menu %}
+<div class="menu">
+    <h3>{{ menu.title }}</h3>
+    <ul class="menu-list">
+        {% for node in menu_tree %}
+            {% include "menu/menu_item.html" with node=node %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
